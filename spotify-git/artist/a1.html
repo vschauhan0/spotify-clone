@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e0865c90c0.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e0865c90c0.js" crossorigin="anonymous"></script>
+    <title>Spotify Clone</title>
+</head>
+
+<body>
+    <section id="navibar">
+
+        <div class="preloader"></div>
+
+        <div id="navbar">
+            <ul id="">
+                <li class="image"><img src="img/logo.png" alt=""></li>
+                <li> <a href="G:\Vansh\mini new\Spotify\index.html">Home</a> </li>
+                <li> <a class="active" href="G:\Vansh\mini new\Spotify\artist.html">Artist</a> </li>
+                <li> <a href="G:\Vansh\mini new\Spotify\contctus.html">Contact us</a> </li>
+                <li class="sign"> <a href="G:\Vansh\mini new\Spotify\signin.html">Sign in</a> </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="progressbar">
+        <div class="progress">
+            <input type="range" min="0" max="100" value="0" id="myProgressBar">
+            <ul>
+                <li class="gif"><img src="img/animate.gif" alt="" id="gif"></li>
+                <li><i class="fa-solid fa-backward-fast" id="previous"></i></li>
+                <li><i class="fa-solid fa-circle-play" id="masterPlay"></i></li>
+                <li><i class="fa-solid fa-forward-fast" id="next"></i></li>
+                <li class="SongName" id="SongName">Phir bhi tumko chahunga</li>
+                </u>
+        </div>
+    </section>
+
+    <section class="blankspace">
+        <div class="blankspace"></div>
+    </section>
+
+    <section class="song-container">
+        <div class="song">
+            <ul>
+                <img src="img/music.jpg" alt="" id="Img"></li>
+                <li class="SongName">Song Name</li>.
+                <li class="SingerName">- Arijit Singh</li>
+                <li class="play"> <i id="0" class="fa-solid songItemPlay fa-circle-play "></i> </li>
+            </ul>
+        </div>
+        <div class="song">
+            <ul>
+                <li><img src="img/music.jpg" alt=""></li>
+                <li class="SongName">Song Name</li>.
+                <li class="SingerName">- Arijit Singh</li>
+                <li class="play"> <i id="1" class="fa-solid songItemPlay fa-circle-play "></i> </li>
+            </ul>
+        </div>
+        <div class="song">
+            <ul>
+                <li><img src="img/music.jpg" alt=""></li>
+                <li class="SongName">Song Name</li>.
+                <li class="SingerName">- Arijit Singh</li>
+                <li class="play"> <i id="2" class="fa-solid songItemPlay fa-circle-play "></i> </li>
+            </ul>
+        </div>
+        <div class="song">
+            <ul>
+                <li><img src="img/music.jpg" alt=""></li>
+                <li class="SongName">Song Name</li>.
+                <li class="SingerName">- Arijit Singh</li>
+                <li class="play"> <i id="3" class="fa-solid songItemPlay fa-circle-play "></i> </li>
+            </ul>
+        </div>
+        <div class="song">
+            <ul>
+                <li><img src="img/music.jpg" alt=""></li>
+                <li class="SongName">Song Name</li>.
+                <li class="SingerName">- Arijit Singh</li>
+                <li class="play"> <i id="4" class="fa-solid songItemPlay fa-circle-play "></i> </li>
+            </ul>
+        </div>
+        <div class="song">
+            <ul>
+                <li><img src="img/music.jpg" alt=""></li>
+                <li class="SongName">Song Name</li>.
+                <li class="SingerName">- Arijit Singh</li>
+                <li class="play"> <i id="5" class="fa-solid songItemPlay fa-circle-play "></i> </li>
+            </ul>
+        </div>
+        <div class="song">
+            <ul>
+                <li><img src="img/music.jpg" alt=""></li>
+                <li class="SongName">Song Name</li>.
+                <li class="SingerName">- Arijit Singh</li>
+                <li class="play"> <i id="6" class="fa-solid songItemPlay fa-circle-play "></i> </li>
+            </ul>
+        </div>
+        <div class="song">
+            <ul>
+                <li><img src="img/music.jpg" alt=""></li>
+                <li class="SongName">Song Name</li>.
+                <li class="SingerName">- Arijit Singh</li>
+                <li class="play"> <i id="7" class="fa-solid songItemPlay fa-circle-play "></i> </li>
+            </ul>
+        </div>
+        <div class="song">
+            <ul>
+                <li><img src="img/music.jpg" alt=""></li>
+                <li class="SongName">Song Name</li>.
+                <li class="SingerName">- Arijit Singh</li>
+                <li class="play"> <i id="8" class="fa-solid songItemPlay fa-circle-play "></i> </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="artistImage">
+        <div class="artist-img">
+            <img src="img/arijit1.webp" alt="">
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="copyright">
+            <p>© 2023, Spotify Clone - HTML CSS Clone website</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        console.log("Welcome");
+
+        let songIndex = 0;
+        let audioElement = new Audio('songs/arijit/0.mp3');
+        let masterPlay = document.getElementById('masterPlay');
+        let myProgressBar = document.getElementById('myProgressBar');
+        let gif = document.getElementById('gif');
+        let SongName = document.getElementById('SongName');
+        let songItem = Array.from(document.getElementsByClassName('song'));
+        let songItemPlay = document.getElementById('songItemPlay');
+        // audioElement.play();
+
+        let songs = [
+            { songname: "Phir bhi tumko chahunga", filePath: "songs/arijit/0.mp3", coverPath: "artists/arijit/img1.jpg" },
+            { songname: "Agar tum sath ho", filePath: "songs/arijit/1.mp3", coverPath: "artists/arijit/img2.jpg" },
+            { songname: "Hawayein", filePath: "songs/arijit/2.mp3", coverPath: "artists/arijit/img3.jpg" },
+            { songname: "Keasariya", filePath: "songs/arijit/3.mp3", coverPath: "artists/arijit/img4.jpg" },
+            { songname: "Thodi Jagah", filePath: "songs/arijit/4.mp3", coverPath: "artists/arijit/img5.jpg" },
+            { songname: "Milne Hai Mujhse Ayi", filePath: "songs/arijit/5.mp3", coverPath: "artists/arijit/img6.jpg" },
+            { songname: "Pal Pal dil ke pas", filePath: "songs/arijit/6.mp3", coverPath: "artists/arijit/img7.jpg" },
+            { songname: "Smajhawan", filePath: "songs/arijit/7.mp3", coverPath: "artists/arijit/img8.jpeg" },
+            { songname: "Zalima", filePath: "songs/arijit/8.mp3", coverPath: "artists/arijit/img9.jpg" },
+        ]
+
+        songItem.forEach((element, i) => {
+            element.getElementsByTagName("img")[0].src = songs[i].coverPath;
+            element.getElementsByClassName("SongName")[0].innerText = songs[i].songname;
+        });
+
+
+
+        masterPlay.addEventListener('click', () => {
+            if (audioElement.paused || audioElement.currentTime <= 0) {
+                audioElement.play();
+                masterPlay.classList.remove("fa-solid");
+                masterPlay.classList.remove("fa-circle-play");
+                masterPlay.classList.add("fa-solid");
+                masterPlay.classList.add("fa-circle-pause");
+                gif.style.opacity = 1;
+            }
+            else {
+                audioElement.pause();
+                masterPlay.classList.remove("fa-solid");
+                masterPlay.classList.remove("fa-circle-pause");
+                masterPlay.classList.add("fa-solid");
+                masterPlay.classList.add("fa-circle-play");
+                gif.style.opacity = 0;
+            }
+
+        })
+
+        audioElement.addEventListener('timeupdate', () => {
+            progrress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+            myProgressBar.value = progrress;
+        })
+
+        myProgressBar.addEventListener('change', () => {
+            audioElement.currentTime = (audioElement.duration * myProgressBar.value) / 100;
+        })
+
+        const makeAllPlay = () => {
+            Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) => {
+                element.classList.remove('fa-circle-pause');
+                element.classList.add('fa-circle-play');
+            })
+        }
+
+        Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) => {
+            element.addEventListener('click', (e) => {
+                makeAllPlay();
+                songIndex = parseInt(e.target.id);
+                e.target.classList.remove('fa-circle-play');
+                e.target.classList.add('fa-circle-pause');
+                audioElement.src = `songs/arijit/${songIndex}.mp3`;
+                SongName.innerText = songs[songIndex].songname;
+                gif.style.opacity = 1;
+                audioElement.currentTime = 0;
+                audioElement.play();
+                masterPlay.classList.remove("fa-circle-play");
+                masterPlay.classList.add("fa-circle-pause");
+            })
+        })
+
+        document.getElementById('next').addEventListener('click', () => {
+            if (songIndex >= 8) {
+                songIndex = 0;
+            }
+            else {
+                songIndex += 1;
+            }
+            makeAllPlay();
+            audioElement.src = `songs/arijit/${songIndex}.mp3`;
+            SongName.innerText = songs[songIndex].songname;
+            audioElement.currentTime = 0;
+            audioElement.play();
+            masterPlay.classList.remove("fa-circle-play");
+            masterPlay.classList.add("fa-circle-pause");
+        })
+
+        document.getElementById('previous').addEventListener('click', () => {
+            if (songIndex <= 0) {
+                songIndex = 8;
+            }
+            else {
+                songIndex -= 1;
+            }
+            audioElement.src = `songs/arijit/${songIndex}.mp3`;
+            SongName.innerText = songs[songIndex].songname;
+            audioElement.currentTime = 0;
+            audioElement.play();
+            masterPlay.classList.remove("fa-circle-play");
+            masterPlay.classList.add("fa-circle-pause");
+        })
+
+    </script>
+</body>
+
+</html>

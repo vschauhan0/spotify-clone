@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #e8faef; */
+    font-family: 'Signika', sans-serif;
+}
+
+.preloader {
+    height: 3px;
+    background-color: black;
+    animation: preloader ease-in-out 1s;
+}
+
+@keyframes preloader {
+    0% {
+        width: 0vw;
+    }
+
+    70% {
+        width: 10vw;
+    }
+
+    90% {
+        width: 100vw;
+    }
+
+    100% {
+        background-color: #1db954;
+        color: #1db954;
+    }
+}
+
+#navbar ul {
+    position: fixed;
+    font-family: 'Signika', sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 75px;
+    width: 98.9vw;
+    font-size: 18px;
+    font-weight: bolder;
+    justify-content: right;
+    z-index: 4 ;
+}
+
+#navbar .sign{
+    margin-right: 30px;
+}
+
+
+#navbar ul li,
+a {
+    color: #fff;
+    list-style-type: none;
+    padding: 8px;
+    text-decoration: none;
+    position: relative;
+}
+
+#navbar ul li img {
+    width: 132px;
+    position: absolute;
+    left: -1150px;
+    top: -13px;
+    cursor: pointer;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    color: #1db954;
+}
+
+#navbar ul li a:hover::after,
+#navbar ul li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #1db954;
+    position: absolute;
+    bottom: 1px;
+    left: 15px;
+}
+
+.progressbar{
+    height: 70px;
+    width: 1400px;
+    border-radius: 8px;
+    background-color: black;
+    position: relative;
+    position: fixed;
+    z-index: 5;
+    bottom: 15px;
+    left: 100px;
+}
+
+.progress input{
+    position: absolute;
+    width: 1300px;
+    left: 50px;
+    background-color: #1db954;
+    margin-top: 8px;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.progress ul{
+    position: absolute;
+    display: flex;
+    color: #fff;
+    list-style: none;
+    font-size: 1.8vw;
+    left: 37vw;
+    cursor: pointer;
+}
+
+.progress li{
+    padding: 8px;
+    margin-top: 22px;
+}
+
+.progress li.SongName{
+    position: absolute;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    right: -595px;
+}
+
+.progress li img{
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    left: -570px;
+    top: -7px;
+    transition: 0.5s;
+    /* opacity: 0; */
+}
+
+.progress li:hover{
+    color: #1db954;
+}
+.progressbar{
+    height: 70px;
+    width: 1400px;
+    border-radius: 8px;
+    background-color: black;
+    position: relative;
+    position: fixed;
+    z-index: 5;
+    bottom: 15px;
+    left: 100px;
+}
+
+.progress input{
+    position: absolute;
+    width: 1300px;
+    left: 50px;
+    background-color: #1db954;
+    margin-top: 8px;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.progress ul{
+    position: absolute;
+    display: flex;
+    color: #fff;
+    list-style: none;
+    font-size: 1.8vw;
+    left: 37vw;
+    cursor: pointer;
+}
+
+.progress li{
+    padding: 8px;
+    margin-top: 22px;
+}
+
+.progress li.SongName{
+    position: absolute;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    right: -595px;
+}
+
+.progress li img{
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    left: -570px;
+    top: -7px;
+    transition: 0.5s;
+    /* opacity: 0; */
+}
+
+.progress li:hover{
+    color: #1db954;
+}
+.progressbar{
+    height: 70px;
+    width: 1400px;
+    border-radius: 8px;
+    background-color: black;
+    position: relative;
+    position: fixed;
+    z-index: 5;
+    bottom: 15px;
+    left: 100px;
+}
+
+.progress input{
+    position: absolute;
+    width: 1300px;
+    left: 50px;
+    background-color: #1db954;
+    margin-top: 8px;
+    z-index: 6;
+    cursor: pointer;
+    transition: all ease-in-out 2s;
+}
+
+.progress ul{
+    position: absolute;
+    display: flex;
+    color: #fff;
+    list-style: none;
+    font-size: 1.8vw;
+    left: 37vw;
+    cursor: pointer;
+}
+
+.progress li{
+    padding: 8px;
+    margin-top: 22px;
+}
+
+.progress li.SongName{
+    position: absolute;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    right: -595px;
+}
+
+.progress li img{
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    left: -570px;
+    top: -7px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.progress li:hover{
+    color: #1db954;
+}
+
+footer{
+    height: 80px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.copyright p{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 80px;
+    width: 760px;
+    border: 3px solid #1db954;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 50px;
+}
+
+.song ul{
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+
+.SongName{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 30px;
+    margin: 10px 0px 0px 220px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.SongName:hover{
+    color: #1db954;
+}
+
+.SingerName{
+    color: #bfbfbf;
+    font-size: 20px;
+    margin: 44px 0px 0px 235px;
+    position: absolute;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.SingerName:hover{
+    color: #19803d;
+}
+
+.song img{
+    height: 68px;
+    margin: 5px 40px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.play{
+    color: #fff;
+    position: absolute;
+    font-size: 60px;
+    margin: 5px 0 0 670px; 
+    cursor: pointer;
+}
+
+.play:hover{
+    color: #1db954;
+}
+
+.blankspace{
+    height: 80px;
+}
+
+.artist-img{
+    position: fixed;
+    left: 950px;
+    top: 125px;
+}
+
+.artist-img img{
+    height: 530px;
+    width: 550px;
+    border: 3px solid black;
+}
