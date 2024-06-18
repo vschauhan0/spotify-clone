@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #e8faef; */
+    font-family: 'Signika', sans-serif;
+}
+
+.preloader {
+    height: 3px;
+    background-color: black;
+    animation: preloader ease-in-out 1s;
+}
+
+@keyframes preloader {
+    0% {
+        width: 0vw;
+    }
+
+    70% {
+        width: 10vw;
+    }
+
+    90% {
+        width: 100vw;
+    }
+
+    100% {
+        background-color: #1db954;
+        color: #1db954;
+    }
+}
+
+#navbar ul {
+    position: fixed;
+    font-family: 'Signika', sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 75px;
+    width: 98.9vw;
+    font-size: 18px;
+    font-weight: bolder;
+    justify-content: right;
+    z-index: 4 ;
+}
+
+#navbar .sign{
+    margin-right: 30px;
+}
+
+#navbar li.menu{
+    opacity: 0;
+}
+
+#navbar ul li,
+a {
+    color: #fff;
+    list-style-type: none;
+    padding: 8px;
+    text-decoration: none;
+    position: relative;
+}
+
+#navbar ul li img {
+    width: 132px;
+    position: absolute;
+    left: -1155px;
+    top: -13px;
+    cursor: pointer;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    color: #1db954;
+}
+
+#navbar ul li a:hover::after,
+#navbar ul li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #1db954;
+    position: absolute;
+    bottom: 1px;
+    left: 15px;
+}
+
+.bac-img img {
+    width: 98.9vw;
+    height: 700px;
+    margin-top: 73px;
+}
+
+#song-banner{
+    margin-top: 50px;
+}
+
+.banner{
+    height: 100px;
+    background-color: #000000;
+}
+
+.banner h1{
+   color: #fff;
+   font-size: 75px;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   position: relative;
+   transition: 0.7s;
+   cursor: pointer;
+}
+
+.banner h1:hover{
+    color: #1db954;
+    font-size: 78px;
+}
+
+.art-container,
+.song-container {
+    display: flex;
+}
+
+.container,
+.art_container {
+    height: 300px;
+    width: 225px;
+    border: 1px solid #fff;
+    margin: 50px 18px 0 18px;
+    background-color: black;
+    position: relative;
+    cursor: pointer;
+    filter: drop-shadow(0.5px 0.5px 2px);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.container img,
+.art_container img {
+    height: 175px;
+    width: 175px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin: 25px ;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.container .SongName,
+.art_container .SongName {
+    color: #fff;
+    padding: 0px 0px 0px 25px;
+    font-weight: bolder;
+    margin-top: -3px;
+    font-size: 25px;
+}
+
+.container .SingerName,
+.art_container .SingerName {
+    color: #c4b1b1;
+    padding: 3px 0px 0px 30px;
+    font-size: 20px;
+}
+
+.container .play,
+.art_container .play {
+    list-style: none;
+    font-size: 35px;
+    color: #fff;
+    position: absolute;
+    translate: 165px -27px;
+}
+
+.container:hover,
+.art_container:hover {
+    scale: 1.01;
+    filter: drop-shadow(2px 2px 3px);
+}
+
+.container .play:hover,
+.art_container .play:hover {
+    transform: rotate(12deg);
+    scale: 1.;
+}
+
+.container .SongName:hover,
+.container .SingerName:hover,
+.art_container .SongName:hover,
+.art_container .SingerName:hover {
+    color: #1db954;
+}
+
+footer{
+    height: 80px;
+    margin-top: 50px;
+}
+
+.copyright p{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progressbar{
+    height: 70px;
+    width: 1400px;
+    border-radius: 8px;
+    background-color: black;
+    position: relative;
+    position: fixed;
+    z-index: 5;
+    bottom: 15px;
+    left: 100px;
+}
+
+.progress input{
+    position: absolute;
+    width: 1300px;
+    left: 50px;
+    background-color: #1db954;
+    margin-top: 8px;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.progress ul{
+    position: absolute;
+    display: flex;
+    color: #fff;
+    list-style: none;
+    font-size: 1.8vw;
+    left: 37vw;
+    cursor: pointer;
+}
+
+.progress li{
+    padding: 8px;
+    margin-top: 22px;
+}
+
+.progress li.SongName{
+    position: absolute;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    right: -595px;
+}
+
+.progress li img{
+    width: 170px;
+    height: 100px;
+    position: absolute;
+    left: -570px;
+    top: -7px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.progress li:hover{
+    color: #1db954;
+}
+
+.blankSpace{
+    height: 90px
+}
+
+#form-detials{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 30px 30px 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-detials form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-detials form input,
+#form-detials form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+#contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 80px 0 80px;
+}
+
+#contact-details .details{
+    width: 40%;
+}
+
+#contact-details .details span,
+#form-detials form span{
+    font-size: 20px;
+}
+
+#contact-details .details h2,
+#form-detials form h2{
+    font-size: 35px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#form-detials form input::placeholder,
+#form-detials form textarea::placeholder{
+    font-size: 15px;
+}
+
+#form-detials form button{
+    background-color: #f0fff5;  
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 18px;
+    color: #000000;
+}
+
+#contact-details .details h3{
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact-details .details li i{
+    font-size: 20px;
+    padding-right: 22px;
+}
+
+#contact-details .details li p{
+    margin: 0;
+    font-size: 17px;
+}
+
+#contact-details .map{
+    width: 55%;
+    height: 400px;
+}
+
+#contact-details .map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.sign-in{
+    border: 2px solid black;
+    height: 550px;
+    width: 400px;
+    margin: 50px 600px;
+}
+
+.sign-in-form h1{
+    font-size: 30px;
+    margin: 15px 75px;
+    color: black;
+}
+
+.sign-in-form h2{
+    font-size: 22px;
+    margin: 15px 16px;
+    color: black;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.sign-in-form p{
+    font-size: 18px;
+    margin: 2px 50px;
+}
+
+.sign-in-form input{
+    font-size: 18px;
+    margin: 0px 20px 10px 45px;
+    width: 300px;
+}
+
+.sign-in-form input::placeholder{
+    font-size: 15px;
+}
+
+.suumit-but{
+    font-size: 18px;
+    padding: 8px;
+    background-color: #1db954;
+    /* border: none; */
+    margin: 15px 160px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sign-in-form p.or{
+    font-size: 20px;
+    margin: 10px 35px;
+}
+
+.sign-in-form p.or span{
+    font-weight: bold;
+}
+
+
+.sign-in-form .continue{
+    margin: 10px 45px;
+    font-size: 20px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.sign-in-form .continue img{
+    height: 20px;
+    position: absolute;
+    margin: 1px 10px ;
+}
+
